@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 10%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    max-width: 960px;
+    min-height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.left {
+    position: relative;
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 15%;
+}
+.mid {
+    position: relative;
+
+    background-color: hsl(184, 100%, 22%);
+    padding: 15%;
+}
+.right {
+    position: relative;
+
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15%;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display";
+}
+.description {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca";
+    font-size: 1rem;
+}
+
+.btn {
+    width: 50%;
+    min-width: 130px;
+    height: 45px;
+    border: none;
+    border-radius: 100px;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    bottom: 10%;
+    font-size: 0.95rem;
+}
+#left {
+    color: hsl(31, 77%, 52%);
+}
+#mid {
+    color: hsl(184, 100%, 22%);
+}
+#right {
+    color: hsl(179, 100%, 13%);
+}
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+#left:hover {
+    color: white;
+}
+#mid:hover {
+    color: white;
+}
+#right:hover {
+    color: white;
+}
+@media (max-width: 720px) {
+    .card {
+        min-width: 300px;
+        max-width: 300px;
+        height: 1000px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .left {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .right {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .description {
+        font-size: 0.68rem;
+    }
+}
